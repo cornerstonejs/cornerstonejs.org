@@ -1,0 +1,171 @@
+@import "_common"
+@import "_header"
+@import "_sidebar"
+
+$width = 900px
+$space = 40px
+
+#logo
+  span
+    font-size: 1.2em
+  img
+    display: none
+
+  color: $highlight
+
+  &:hover
+    color: white
+  &:active
+    color: $active
+
+.sidebar
+  display: none
+
+#mobile-bar
+  &.top
+    background-color: transparent
+    box-shadow: none
+    .logo
+      display: none
+
+#hero
+  padding: $space 40px 30px
+  background-color: #151a1f
+
+  .inner
+    margin: 0 auto
+
+    .demo-section
+      display: -webkit-flex
+      display: flex
+      height: 320px
+
+      .demo-code
+        -webkit-flex: initial;
+        flex: initial;
+        width: 50%
+        min-width: 100px;
+        pre
+          margin: 0
+          height: 320px
+
+      .demo-cornerstone
+        position: relative
+        width: 50%
+        -webkit-flex: 1;
+        flex: 1;
+
+        #demo-element
+          height: calc(100% - 40px)
+          width: calc(100% - 40px)
+          margin: 20px
+          overflow: auto
+          border: 1px solid $highlight
+          border-radius: 4px
+          transition: border-color 0.3s ease
+
+          &:hover
+            border-color: $text
+
+          #fullscreen-button
+            cursor: pointer
+            position: absolute
+            top: 25px
+            right: 25px
+            font-variant: all-petite-caps
+
+    .buttons
+      width: 100%
+      flex: 1
+      text-align: center
+
+  h1
+    font-weight: 300
+    margin: 0
+    font-size: 3.2em
+    color: darken(white, 10%)
+  h4
+    color: darken(white, 10%)
+    margin: 5px 0
+
+  .button
+    margin: 1em 0
+    font-size: 1.05em
+    font-weight: 600
+    letter-spacing: .1em
+    min-width: 8em
+    text-align: center
+    background-color: $active
+    color: #16202b
+    border-color: #16202b
+
+#highlights
+  background-color: darken(#151a1f, 30%)
+  padding: 35px 0
+  .inner
+    max-width: $width
+    margin: 0 auto
+    text-align: center
+  .point
+    width: 33%
+    display: inline-block
+    vertical-align: top
+    box-sizing: border-box
+    padding: 0 2em
+    h2
+      color: $highlight
+      font-size: 1.5em
+      font-weight: 400
+      margin: 0
+      padding: .5em 0
+    p
+      color: $light
+
+#footer
+  padding: $space 0
+  color: $highlight
+  text-align: center
+  .social-icon
+    margin 0 5px
+    svg
+      width 18px
+      height 18px
+  a
+    font-weight: 700
+    color: $highlight
+
+@media screen and (max-width: $width)
+  body
+    -webkit-text-size-adjust: none
+    font-size: 14px
+  .sidebar
+    display: block
+  #header
+    display: none
+  #mobile-bar
+    display: block
+  #hero
+    padding: $space 40px 30px
+    .demo-element
+      float: none
+      margin: 30px 0 15px
+      width: 140px
+      height: 140px
+    .left, .right
+      text-align: center
+      width: 100%
+    h1
+      font-size: 2em
+    h2
+      display: block
+    .button
+      font-size: .9em
+  #highlights
+    .point
+      display: block
+      margin: 0 auto
+      width: 300px
+      padding: 0 40px 30px
+      &:before
+        content: "—"
+        color: $highlight

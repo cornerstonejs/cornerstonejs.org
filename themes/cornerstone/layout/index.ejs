@@ -1,0 +1,116 @@
+<div class="sidebar">
+  <div class="sidebar-inner-index">
+    <ul class="main-menu">
+      <%- partial('partials/main_menu', { context: 'sidebar' }) %>
+    </ul>
+  </div>
+</div>
+
+<div id="hero">
+  <div class="inner">
+  <h1>
+    Medical Imaging, Simplified.
+  </h1>
+      <h4>The easiest way to build interactive medical imaging web applications.</h4>
+      <div class="demo-section">
+          <div class="demo-code">
+              <!--<pre class="javascript">
+              <!--<code>
+const element = document.getElementById('demo-element');
+const imageId = 'https://example.url.com/image.dcm';
+
+cornerstone.enable(element);
+cornerstone.loadAndCacheImage(imageId).then(function(image) {
+  cornerstone.displayImage(element, image);
+
+  // Enable our tools
+  cornerstoneTools.mouseInput.enable(element);
+  cornerstoneTools.mouseWheelInput.enable(element);
+  cornerstoneTools.wwwc.activate(element, 1); // Left Click
+  cornerstoneTools.pan.activate(element, 2); // Middle Click
+  cornerstoneTools.zoom.activate(element, 4); // Right Click
+  cornerstoneTools.zoomWheel.activate(element); // Mouse Wheel
+});
+              </code>
+              </pre>-->
+
+              <pre class="javascript">              <code class="hljs">
+<span class="hljs-keyword">const</span> element = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'demo-element'</span>);
+<span class="hljs-keyword">const</span> imageId = <span class="hljs-string">'https://example.url.com/image.dcm'</span>;
+
+cornerstone.enable(element);
+cornerstone.loadAndCacheImage(imageId).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">image</span>) </span>{
+  cornerstone.displayImage(element, image);
+
+  <span class="hljs-comment">// Enable our tools</span>
+  cornerstoneTools.mouseInput.enable(element);
+  cornerstoneTools.mouseWheelInput.enable(element);
+  cornerstoneTools.wwwc.activate(element, <span class="hljs-number">1</span>); <span class="hljs-comment">// Left Click</span>
+  cornerstoneTools.pan.activate(element, <span class="hljs-number">2</span>); <span class="hljs-comment">// Middle Click</span>
+  cornerstoneTools.zoom.activate(element, <span class="hljs-number">4</span>); <span class="hljs-comment">// Right Click</span>
+  cornerstoneTools.zoomWheel.activate(element); <span class="hljs-comment">// Mouse Wheel</span>
+});
+              </code>
+              </pre>
+          </div>
+          <div class="demo-cornerstone">
+              <div id="demo-element" class="cornerstone-element"
+                   oncontextmenu="return false"
+                   onmousedown='return false;'>
+
+                  <a id="fullscreen-button">
+                      Fullscreen
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="buttons">
+          <a class="button" href="https://rawgit.com/chafey/cornerstone/master/example/index.html">GET STARTED</a>
+      </div>
+  </div>
+</div>
+
+<div id="highlights">
+  <div class="inner">
+    <div class="point">
+      <h2>Standards Compliant</h2>
+      <p>Robust DICOM Parsing. Supports all transfer syntaxes. Supports WADO-URI and WADO-RS.</p>
+    </div>
+
+    <div class="point">
+      <h2>Fast</h2>
+      <p>High performance image display. Multi-threaded image decoding in Web Workers</p>
+    </div>
+
+    <div class="point">
+      <h2>Extensible</h2>
+      <p>Designed to be modular. Create your own tools and image loaders easily.</p>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <p>
+    <a class="social-icon" href="https://github.com/cornerstonejs" target="_blank">
+      <%- partial('icons/github') %>
+    </a>
+  </p>
+  <p>Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a><br>
+  Copyright &copy; 2014-<%- new Date().getFullYear() %> Chris Hafey</p>
+</div>
+
+<script>
+(function () {
+  var topScrolled = false
+
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 165 && !topScrolled) {
+      topScrolled = true
+      document.getElementById('mobile-bar').classList.remove('top')
+    } else if (window.pageYOffset <= 165 && topScrolled) {
+      topScrolled = false
+      document.getElementById('mobile-bar').classList.add('top')
+    }
+  })
+})()
+</script>
