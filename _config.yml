@@ -66,3 +66,4 @@ theme: cornerstone
 deploy:
 - type: git
   repo: git@github.com:/cornerstonejs/cornerstonejs.org
+  branch: gh-pages
