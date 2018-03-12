@@ -1,19 +1,21 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Cornerstone</title>
     <meta charset="utf-8">
-    <meta name="description" content="Cornerstone">
+    <meta name="description" content="Cornerstone.js - The easiest way to build interactive medical imaging web applications. Cornerstone provides a free open-source framework to build your own DICOM viewer with HTML and JavaScript.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="Cornerstone">
-    <meta property="og:description" content="Cornerstone">
+    <meta property="og:description" content="Cornerstone.js - The easiest way to build interactive medical imaging web applications. Cornerstone provides a free open-source framework to build your own DICOM viewer with HTML and JavaScript.">
     <meta property="og:image" content="https://cornerstonejs.org//images/logo.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Cornerstone">
-    <meta name="twitter:description" content="Cornerstone">
+    <meta name="twitter:description" content="Cornerstone.js - The easiest way to build interactive medical imaging web applications. Cornerstone provides a free open-source framework to build your own DICOM viewer with HTML and JavaScript.">
     <meta name="twitter:image" content="https://cornerstonejs.org/images/logo.png">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
@@ -38,9 +40,7 @@
     <meta name="msapplication-config" content="browserconfig.xml">
     <link rel="manifest" href="/manifest.json">
 
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
-
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Roboto Mono:300,400,600' rel='stylesheet' type='text/css'>
 
     <!-- main page styles -->
     <link rel="stylesheet" href="/css/index.css">
@@ -55,29 +55,6 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-110573590-1');
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "SoftwareSourceCode",
-      "name": "Cornerstone.js",
-      "alternateName": "CornerstoneJS",
-      "url": "https://cornerstonejs.org/",
-      "description": "JavaScript medical imaging framework",
-      "programmingLanguage": "JavaScript",
-      "license": "MIT",
-      "creator": {
-        "@context": "http://schema.org",
-      "@type": "Person",
-        "name": "Chris Hafey"
-      },
-      "creator": {
-        "@context": "http://schema.org",
-      "@type": "Person",
-        "name": "Chris Hafey"
-      }
-    }
     </script>
   </head>
   <body class="">
@@ -118,7 +95,7 @@
   <div class="sidebar-inner-index">
     <ul class="main-menu">
       <li>
-    <a href="https://rawgit.com/chafey/cornerstone/master/example/index.html"
+    <a href="https://docs.cornerstonejs.org/"
      class="nav-link">
       Getting Started
     </a>
@@ -231,7 +208,7 @@ cornerstone.loadAndCacheImage(imageId).then(<span class="hljs-function"><span cl
     </a>
   </p>
   <p>Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a><br>
-  Copyright &copy; 2014-2017 Chris Hafey</p>
+  Copyright &copy; 2014-2018 Chris Hafey</p>
 </div>
 
 <script>
@@ -249,6 +226,25 @@ cornerstone.loadAndCacheImage(imageId).then(<span class="hljs-function"><span cl
   })
 })()
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Cornerstone.js",
+  "alternateName": "CornerstoneJS",
+  "url": "https://cornerstonejs.org/",
+  "description": "JavaScript medical imaging framework",
+  "programmingLanguage": "JavaScript",
+  "license": "MIT",
+  "creator": {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Chris Hafey"
+  }
+}
+</script>
+
 
     
 
@@ -271,5 +267,5 @@ cornerstone.loadAndCacheImage(imageId).then(<span class="hljs-function"><span cl
       FastClick.attach(document.body)
     }, false)
     </script>
-  <script async>'use strict';'serviceWorker'in navigator&&navigator.serviceWorker.register('service-worker.js').then(function(a){a.onupdatefound=function(){var b=a.installing;b.onstatechange=function(){switch(b.state){case'installed':navigator.serviceWorker.controller?console.log('New or updated content is available.'):console.log('Content is now available offline!');break;case'redundant':console.error('The installing service worker became redundant.');}}}}).catch(function(a){console.error('Error during service worker registration:',a)});
-</script></body></html>
+  </body>
+</html>
